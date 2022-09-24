@@ -23,7 +23,7 @@ export default function Navbar() {
             window.removeEventListener('resize', handleResize)
 
         }
-    })
+    }, [])
 
     function toggleClick() {
         console.log(toggle)
@@ -33,7 +33,7 @@ export default function Navbar() {
     return (
         <header className="header">
             <div className="header__container">
-                <a className="header__logo" href="#">bratva.dev<br /><span>the best way to get result</span></a>
+                <a className="header__logo" href="/#">bratva.dev<br /><span>the best way to get result</span></a>
                 <div className={`menu ${toggle ? 'menu-open' : ''}`}>
                     {isTablet && <div className="menu__languages">
                         <button>EN</button>
@@ -42,12 +42,12 @@ export default function Navbar() {
                     </div>}
                     <nav className="menu__nav">
                         <ul className="menu__list">
-                            <li><a href="#" className="menu__link">about</a></li>
-                            <li><a href="#" className="menu__link">solutions</a></li>
-                            <li><a href="#" className="menu__link">Technologies</a></li>
-                            <li><a href="#" className="menu__link">Cases</a></li>
-                            <li><a href="#" className="menu__link">Team</a></li>
-                            {isTablet && <li><a href="#" className="menu__link">Let`s Talk</a></li>}
+                            <li><a href="/#" className="menu__link">about</a></li>
+                            <li><a href="/#" className="menu__link">solutions</a></li>
+                            <li><a href="/#" className="menu__link">Technologies</a></li>
+                            <li><a href="/#" className="menu__link">Cases</a></li>
+                            <li><a href="/#" className="menu__link">Team</a></li>
+                            {isTablet && <li><a href="/#" className="menu__link">Let`s Talk</a></li>}
                         </ul>
                     </nav>
                     {isTablet &&
@@ -59,8 +59,8 @@ export default function Navbar() {
                 </div>
                 {!isTablet &&
                     <div className="header__right right-header">
-                        <a href="#" className="right-header__link">Let`s Talk</a>
-                        <button href="#" className="right-header__languages">ENG/UA/GER</button>
+                        <a href="/#" className="right-header__link">Let`s Talk</a>
+                        <button className="right-header__languages">ENG/UA/GER</button>
                     </div>
                 }
                 {isTablet &&

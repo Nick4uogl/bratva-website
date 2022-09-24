@@ -21,7 +21,7 @@ export default function Solutions() {
             window.removeEventListener('resize', handleResize)
 
         }
-    })
+    }, [])
 
     const carousel = React.useRef()
     return (

@@ -32,7 +32,7 @@ export default function About() {
             window.removeEventListener('resize', handleResize)
 
         }
-    })
+    }, [])
 
     const carousel = React.useRef()
 
