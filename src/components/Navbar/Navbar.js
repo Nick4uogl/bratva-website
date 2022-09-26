@@ -1,8 +1,9 @@
 import React from 'react'
 import './Navbar.scss'
-import instagramIcon from '../img/Instagram.png'
-import linkedInIcon from '../img/LinkedIn.png'
-import telegramIcon from '../img/telegram.png'
+import { Link } from 'react-scroll'
+import instagramIcon from '../../img/Instagram.png'
+import linkedInIcon from '../../img/LinkedIn.png'
+import telegramIcon from '../../img/telegram.png'
 
 export default function Navbar() {
     const [isTablet, setIsTablet] = React.useState(window.innerWidth <= 991 ? true : false)
@@ -33,7 +34,7 @@ export default function Navbar() {
     return (
         <header className="header">
             <div className="header__container">
-                <a className="header__logo" href="/#">bratva.dev<br /><span>the best way to get result</span></a>
+                <a href='/#' className="header__logo">bratva.dev<br /><span>the best way to get result</span></a>
                 <div className={`menu ${toggle ? 'menu-open' : ''}`}>
                     {isTablet && <div className="menu__languages">
                         <button>EN</button>
@@ -42,12 +43,12 @@ export default function Navbar() {
                     </div>}
                     <nav className="menu__nav">
                         <ul className="menu__list">
-                            <li><a href="/#" className="menu__link">about</a></li>
-                            <li><a href="/#" className="menu__link">solutions</a></li>
-                            <li><a href="/#" className="menu__link">Technologies</a></li>
-                            <li><a href="/#" className="menu__link">Cases</a></li>
-                            <li><a href="/#" className="menu__link">Team</a></li>
-                            {isTablet && <li><a href="/#" className="menu__link">Let`s Talk</a></li>}
+                            <li><Link to="about" spy={true} smooth={true} offset={-70} duration={500} className="menu__link" onClick={() => setToggle(false)}>about</Link></li>
+                            <li><Link to="solutions" spy={true} smooth={true} offset={-90} duration={500} className="menu__link" onClick={() => setToggle(false)}>solutions</Link></li>
+                            <li><Link to="technologies" spy={true} smooth={true} offset={-70} duration={500} className="menu__link" onClick={() => setToggle(false)}>Technologies</Link></li>
+                            <li><Link to="cases" spy={true} smooth={true} offset={-70} duration={500} className="menu__link" onClick={() => setToggle(false)}>Cases</Link></li>
+                            <li><Link to="team" spy={true} smooth={true} offset={-70} duration={500} className="menu__link" onClick={() => setToggle(false)}>Team</Link></li>
+                            {isTablet && <li><Link to="talk" spy={true} smooth={true} offset={-70} duration={500} className="menu__link" onClick={() => setToggle(false)}>Let`s Talk</Link></li>}
                         </ul>
                     </nav>
                     {isTablet &&
@@ -59,7 +60,7 @@ export default function Navbar() {
                 </div>
                 {!isTablet &&
                     <div className="header__right right-header">
-                        <a href="/#" className="right-header__link">Let`s Talk</a>
+                        <Link to="talk" spy={true} smooth={true} offset={-70} duration={500} className="right-header__link">Let`s Talk</Link>
                         <button className="right-header__languages">ENG/UA/GER</button>
                     </div>
                 }

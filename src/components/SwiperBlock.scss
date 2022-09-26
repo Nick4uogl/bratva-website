@@ -1,0 +1,23 @@
+.swiper-block {
+    @media (min-width: 991px) {
+        margin: 0px -40px;
+        padding: 0px 35px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #000;
+
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    .swiper-button-next {
+        right: 5px;
+    }
+
+    .swiper-button-prev {
+        left: 5px;
+    }
+}

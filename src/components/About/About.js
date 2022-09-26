@@ -1,7 +1,9 @@
 import React from 'react'
-import upworkImg from '../img/upwork.png'
+import upworkImg from '../../img/upwork.png'
+import { Swiper } from 'swiper/react'
+import { SwiperSlide } from 'swiper/react'
+import 'swiper/scss'
 import './About.scss'
-import { motion } from "framer-motion"
 
 // Import Swiper styles
 import 'swiper/scss';
@@ -9,7 +11,6 @@ import 'swiper/scss';
 export default function About() {
     const [isTablet, setIsTablet] = React.useState(window.innerWidth <= 991 ? true : false)
     const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 767 ? true : false)
-    const [carouselWidthToScroll, setCarouselWidthToScroll] = React.useState()
 
     React.useEffect(() => {
         function handleResize() {
@@ -24,8 +25,6 @@ export default function About() {
                 setIsMobile(false)
             }
         }
-        setCarouselWidthToScroll(carousel.current.scrollWidth - carousel.current.offsetWidth)
-        console.log(carousel.current.scrollWidth - carousel.current.offsetWidth)
         window.addEventListener('resize', handleResize)
 
         return _ => {
@@ -34,34 +33,32 @@ export default function About() {
         }
     }, [])
 
-    const carousel = React.useRef()
 
     return (
-        <section className='about'>
+        <section id='about' className='about'>
             <div className="about__container">
                 <div className="about__top top-about">
                     <div className={`top-about__left ${isMobile ? "hidden" : ""}`}>
                         <h2 className="top-about__title">Products&amp;Services&amp;Partners</h2>
-                        <motion.div className='top-about__carousel' ref={carousel}>
-                            <motion.div className="top-about__services services-about"
-                                drag={isMobile ? "x" : ""}
-                                dragConstraints={{ left: 0, right: -carouselWidthToScroll }}
-
+                        <div className='top-about__carousel'>
+                            <Swiper className="top-about__services services-about"
+                                spaceBetween={20}
+                                slidesPerView={'auto'}
                             >
-                                <motion.div>
+                                <SwiperSlide className='services-about__slide'>
                                     <a href="/#" className="services-about__item">bratva courses</a>
-                                </motion.div>
-                                <motion.div>
+                                </SwiperSlide>
+                                <SwiperSlide className='services-about__slide'>
                                     <a href="/#" className="services-about__item">bratva cloud</a>
-                                </motion.div>
-                                <motion.div>
+                                </SwiperSlide>
+                                <SwiperSlide className='services-about__slide'>
                                     <a href="/#" className="services-about__item">bratva design</a>
-                                </motion.div>
-                                <motion.div>
+                                </SwiperSlide>
+                                <SwiperSlide className='services-about__slide'>
                                     <a href="/#" className="services-about__item services-about__item_u"><img src={upworkImg} alt="" /></a>
-                                </motion.div>
-                            </motion.div>
-                        </motion.div>
+                                </SwiperSlide>
+                            </Swiper>
+                        </div>
                     </div>
                     {!isTablet && <div className="top-about__right">
                         We have three subsidiaries from bratva.dev

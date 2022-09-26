@@ -1,10 +1,13 @@
 import './App.scss';
-import Navbar from './components/Navbar.js'
-import Intro from './components/Intro.js'
-import About from './components/About.js'
-import Solutions from './components/Solutions.js'
-import Technologies from './components/Technologies.js'
-import Cases from './components/Cases.js';
+import Navbar from './components/Navbar/Navbar.js'
+import Intro from './components/Intro/Intro.js'
+import About from './components/About/About.js'
+import Solutions from './components/Solutions/Solutions.js'
+import Technologies from './components/Technologies/Technologies.js'
+import Cases from './components/Cases/Cases.js'
+import Team from './components/Team/Team.js'
+import Talk from './components/Talk/Talk.js'
+import Footer from './components/Footer/Footer.js'
 
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <Solutions />
       <Technologies />
       <Cases />
+      <Team />
+      <Talk />
+      <Footer />
     </div>
   );
 }

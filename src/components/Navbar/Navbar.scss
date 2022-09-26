@@ -1,5 +1,10 @@
 .header {
     background-color: #000000;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
 
     &__container {
         padding: 5px 15px;
@@ -15,14 +20,27 @@
     }
 
     &__logo {
+        cursor: pointer;
         font-size: 30px;
         line-height: 18px;
         color: #FFFFFF;
         flex: 0 0 166px;
         margin-right: 40px;
+        background: linear-gradient(to right, orange, pink, springgreen);
+        animation: rainbow 2s ease-in-out infinite;
+        transition: color .2s ease-in-out;
+        padding-top: 5px;
+        background-position: left;
+        background-size: 200% 200%;
+        background-clip: text;
+        -webkit-background-clip: text;
 
         span {
             font-size: 12px;
+        }
+
+        &:hover {
+            color: rgba(0, 0, 0, 0);
         }
 
         @media (max-width: 1020px) {
@@ -38,6 +56,21 @@
         }
     }
 }
+
+@keyframes rainbow {
+    0% {
+        background-position: left
+    }
+
+    50% {
+        background-position: right
+    }
+
+    100% {
+        background-position: left
+    }
+}
+
 
 .menu {
     flex: 1 1 auto;
@@ -57,6 +90,7 @@
         font-size: 20px;
         line-height: 1.35;
         color: #FFFFFF;
+        cursor: pointer;
     }
 
     &__languages {
@@ -116,6 +150,7 @@
         color: #000000;
         border-radius: 5px;
         transition: all .3s ease-out;
+        cursor: pointer;
 
         &:hover {
             box-shadow: 0px 5px 4px #FFFFFF;
