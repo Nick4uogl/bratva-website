@@ -5,6 +5,9 @@ import 'swiper/scss';
 import 'swiper/css/navigation';
 import './Team.scss'
 import test from '../../img/solutions-bg.png'
+import pohoriliy1 from '../../img/team/pohoriliy1.png'
+import pohoriliy2 from '../../img/team/pohoriliy2.png'
+import pohoriliy3 from '../../img/team/pohoriliy3.png'
 
 
 export default function Team() {
@@ -15,7 +18,7 @@ export default function Team() {
                 <Swiper className='team__swiper'
                     modules={Navigation}
                     navigation
-                    spaceBetween={47}
+                    spaceBetween={38}
                     slidesPerView={3}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
@@ -34,21 +37,37 @@ export default function Team() {
                         }
                     }}
                 >
-                    <SwiperSlide className='project-cases'>
-                        <img src={test} alt="" />
-                        <h2 className='project-cases__title'>name of case</h2>
+                    <SwiperSlide className='member'>
+                        <div className="member__images">
+                            <div className='member__image'><img src={pohoriliy3} alt="" /></div>
+                            <div className='member__image'><img src={pohoriliy1} alt="" /></div>
+                            <div className='member__image'><img src={pohoriliy2} alt="" /></div>
+                        </div>
+                        <h2 className='member__title'>Ivan Pohorilyi: CEO, PM</h2>
                     </SwiperSlide>
-                    <SwiperSlide className='project-cases'>
-                        <img src={test} alt="" />
-                        <h2 className='project-cases__title'>name of case</h2>
+                    <SwiperSlide className='member'>
+                        <div className="member__images">
+                            <div className='member__image'><img src={pohoriliy3} alt="" /></div>
+                            <div className='member__image'><img src={pohoriliy2} alt="" /></div>
+                            <div className='member__image'><img src={pohoriliy1} alt="" /></div>
+                        </div>
+                        <h2 className='member__title'>Ivan Pohorilyi: CEO, PM</h2>
                     </SwiperSlide>
-                    <SwiperSlide className='project-cases'>
-                        <img src={test} alt="" />
-                        <h2 className='project-cases__title'>name of case</h2>
+                    <SwiperSlide className='member'>
+                        <div className="member__images">
+                            <div className='member__image'><img src={pohoriliy3} alt="" /></div>
+                            <div className='member__image'><img src={pohoriliy2} alt="" /></div>
+                            <div className='member__image'><img src={pohoriliy1} alt="" /></div>
+                        </div>
+                        <h2 className='member__title'>Ivan Pohorilyi: CEO, PM</h2>
                     </SwiperSlide>
-                    <SwiperSlide className='project-cases'>
-                        <img src={test} alt="" />
-                        <h2 className='project-cases__title'>name of case</h2>
+                    <SwiperSlide className='member'>
+                        <div className="member__images">
+                            <div className='member__image'><img src={pohoriliy3} alt="" /></div>
+                            <div className='member__image'><img src={pohoriliy2} alt="" /></div>
+                            <div className='member__image'><img src={pohoriliy1} alt="" /></div>
+                        </div>
+                        <h2 className='member__title'>Ivan Pohorilyi: CEO, PM</h2>
                     </SwiperSlide>
                 </Swiper>
             </div>
