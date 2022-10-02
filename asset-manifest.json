@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bratva-website/static/css/main.5bad9921.css",
-    "main.js": "/bratva-website/static/js/main.02b41df1.js",
+    "main.js": "/bratva-website/static/js/main.32b82fc3.js",
     "static/js/787.9261a04c.chunk.js": "/bratva-website/static/js/787.9261a04c.chunk.js",
     "static/media/intro-bg.png": "/bratva-website/static/media/intro-bg.2edea73552a5c91781a3.png",
     "static/media/solutions-bg.png": "/bratva-website/static/media/solutions-bg.350a1579d5a52f9f5b90.png",
@@ -10,11 +10,11 @@
     "static/media/pohoriliy2.png": "/bratva-website/static/media/pohoriliy2.c8463eace0b18a566ef6.png",
     "index.html": "/bratva-website/index.html",
     "main.5bad9921.css.map": "/bratva-website/static/css/main.5bad9921.css.map",
-    "main.02b41df1.js.map": "/bratva-website/static/js/main.02b41df1.js.map",
+    "main.32b82fc3.js.map": "/bratva-website/static/js/main.32b82fc3.js.map",
     "787.9261a04c.chunk.js.map": "/bratva-website/static/js/787.9261a04c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5bad9921.css",
-    "static/js/main.02b41df1.js"
+    "static/js/main.32b82fc3.js"
   ]
 }
