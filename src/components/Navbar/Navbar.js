@@ -35,7 +35,7 @@ export default function Navbar() {
     return (
         <header className="header">
             <div className="header__container">
-                <NavLink to={"/"} className="header__logo">bratva.dev<br /><span>the best way to get result</span></NavLink>
+                <NavLink to={"/bratva-website"} className="header__logo">bratva.dev<br /><span>the best way to get result</span></NavLink>
                 <div className={`menu ${toggle ? 'menu-open' : ''}`}>
                     {isTablet && <div className="menu__languages">
                         <button>EN</button>
@@ -54,9 +54,9 @@ export default function Navbar() {
                     </nav>
                     {isTablet &&
                         <div className="menu__socials">
-                            <a href='#'><img src={instagramIcon} alt="" /></a>
-                            <a href='#'><img src={linkedInIcon} alt="" /></a>
-                            <a href='#'><img src={telegramIcon} alt="" /></a>
+                            <a href='/#'><img src={instagramIcon} alt="" /></a>
+                            <a href='/#'><img src={linkedInIcon} alt="" /></a>
+                            <a href='/#'><img src={telegramIcon} alt="" /></a>
                         </div>}
                 </div>
                 {!isTablet &&

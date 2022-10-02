@@ -20,20 +20,6 @@ const draw = {
         };
     }
 };
-const drawArrow = {
-    hidden: { pathLength: 0, opacity: 0 },
-    visible: (i) => {
-        const delay = 1 + i * 0.6;
-        return {
-            pathLength: 1,
-            opacity: 1,
-            transition: {
-                pathLength: { delay, type: "spring", duration: 0.1, bounce: 0 },
-                opacity: { delay, duration: 0.01 }
-            }
-        };
-    }
-};
 
 export default function About() {
     const [isTablet, setIsTablet] = React.useState(window.innerWidth <= 991 ? true : false)

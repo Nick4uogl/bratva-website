@@ -5,7 +5,6 @@ import SwiperCore from "swiper/core"
 import 'swiper/scss';
 import 'swiper/css/navigation'
 import './Cases.scss'
-import test from '../../img/solutions-bg.png'
 
 SwiperCore.use([Navigation])
 
@@ -173,7 +172,7 @@ export default function Cases() {
             </SwiperSlide>
         )
     })
-    const mobileDevProjects = webDevData.map((project) => {
+    const mobileDevProjects = mobileDevData.map((project) => {
         return (
             <SwiperSlide>
                 <Link to={`/${project.id}`} className='category-cases__project project-cases'>
@@ -183,7 +182,7 @@ export default function Cases() {
             </SwiperSlide>
         )
     })
-    const botDevProjects = webDevData.map((project) => {
+    const botDevProjects = botDevData.map((project) => {
         return (
             <SwiperSlide>
                 <Link to={`/${project.id}`} className='category-cases__project project-cases'>
@@ -193,7 +192,7 @@ export default function Cases() {
             </SwiperSlide>
         )
     })
-    const desctopDevProjects = webDevData.map((project) => {
+    const desctopDevProjects = dekstopDevData.map((project) => {
         return (
             <SwiperSlide>
                 <Link to={`/${project.id}`} className='category-cases__project project-cases'>

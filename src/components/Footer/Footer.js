@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="footer__container">
                 <div className="footer__row">
                     <div className="footer__column">
-                        <NavLink className='footer__logo' to={"/"}>bratva.dev <br /><span>the best way to get result</span></NavLink>
+                        <NavLink className='footer__logo' to={"/bratva-website"}>bratva.dev <br /><span>the best way to get result</span></NavLink>
                         <ul className="footer__list">
                             <li><Link to="about" spy={true} smooth={true} offset={-70} duration={500} className="footer__link">About</Link></li>
                             <li><Link to="solutions" spy={true} smooth={true} offset={-70} duration={500} className="footer__link">Solutions</Link></li>

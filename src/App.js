@@ -6,7 +6,7 @@ import ProjectPage from './components/ProjectPage/ProjectPage';
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/bratva-website" element={<Home />} />
       <Route path='/:projectId' element={<ProjectPage />} />
     </Routes>
   );

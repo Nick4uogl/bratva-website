@@ -17,8 +17,7 @@ const webDevData = [
     {
         id: 2,
         title: "name of case",
-        desktopImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
-        category: "web-development",
+        desktopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
         mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
         category: "web-development",
         description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
@@ -46,7 +45,9 @@ const webDevData = [
 
 function ProjectPage() {
     const { projectId } = useParams()
+    console.log(projectId)
     const project = webDevData.find((project) => project.id === Number(projectId))
+    console.log(project)
     const [isTablet, setIsTablet] = React.useState(window.innerWidth < 1150 ? true : false)
     React.useEffect(() => {
         function handleResize() {
@@ -95,7 +96,7 @@ function ProjectPage() {
                         <p className="project-page__desc">
                             {project.description}
                         </p>
-                        <p className="project-page__link">link: <a href="#">{project.link}</a></p>
+                        <p className="project-page__link">link: <a href="/#">{project.link}</a></p>
                     </div>
                 </div>
             </main>
