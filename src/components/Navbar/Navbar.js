@@ -4,6 +4,7 @@ import { Link } from 'react-scroll'
 import instagramIcon from '../../img/Instagram.png'
 import linkedInIcon from '../../img/LinkedIn.png'
 import telegramIcon from '../../img/telegram.png'
+import { NavLink } from 'react-router-dom'
 
 export default function Navbar() {
     const [isTablet, setIsTablet] = React.useState(window.innerWidth <= 991 ? true : false)
@@ -34,7 +35,7 @@ export default function Navbar() {
     return (
         <header className="header">
             <div className="header__container">
-                <a href='/#' className="header__logo">bratva.dev<br /><span>the best way to get result</span></a>
+                <NavLink to={"/"} className="header__logo">bratva.dev<br /><span>the best way to get result</span></NavLink>
                 <div className={`menu ${toggle ? 'menu-open' : ''}`}>
                     {isTablet && <div className="menu__languages">
                         <button>EN</button>
@@ -53,9 +54,9 @@ export default function Navbar() {
                     </nav>
                     {isTablet &&
                         <div className="menu__socials">
-                            <img src={instagramIcon} alt="" />
-                            <img src={linkedInIcon} alt="" />
-                            <img src={telegramIcon} alt="" />
+                            <a href='#'><img src={instagramIcon} alt="" /></a>
+                            <a href='#'><img src={linkedInIcon} alt="" /></a>
+                            <a href='#'><img src={telegramIcon} alt="" /></a>
                         </div>}
                 </div>
                 {!isTablet &&

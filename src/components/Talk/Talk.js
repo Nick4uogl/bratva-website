@@ -6,9 +6,12 @@ import telegramIcon from '../../img/telegram.png'
 
 export default function Talk() {
     const [formData, setFormData] = React.useState(
-        { name: "", email: "", message: "" }
+        { name: "name", email: "email", message: "message" }
     )
     const [blurData, setBlurData] = React.useState(
+        { name: false, email: false, message: false }
+    )
+    const [isClicked, setIsClicked] = React.useState(
         { name: false, email: false, message: false }
     )
     const [formErrors, setFormErrors] = React.useState({})
@@ -28,7 +31,6 @@ export default function Talk() {
     }
 
     function handleFocus(event) {
-        console.log(1)
         setBlurData((prevBlurData => {
             return {
                 ...prevBlurData,
@@ -37,18 +39,35 @@ export default function Talk() {
         }))
     }
 
+    function handleClick(event) {
+        const target = event.target
+        if (!isClicked[target.name]) {
+            setFormData((prevForm) => {
+                return {
+                    ...prevForm,
+                    [event.target.name]: event.target.value + ": "
+                }
+            })
+            setIsClicked((prevData) => {
+                return {
+                    ...prevData,
+                    [target.name]: true
+                }
+            })
+        }
+    }
+
     function validate(formValues) {
         const errors = {}
-        if (!formValues.name) {
+        if (!formValues.name || formValues.name === "name") {
             errors.name = "Input your name"
         }
-        if (!formValues.email) {
+        if (!formValues.email || formValues.email === "email") {
             errors.email = "Input your email"
         }
-        if (!formValues.message) {
+        if (!formValues.message || formValues.message === "message") {
             errors.message = "Input your message"
         }
-
         return errors
     }
 
@@ -61,19 +80,19 @@ export default function Talk() {
                 <div className="talk__wrapper">
                     <form className='talk__form' onSubmit={handleSubmit}>
                         <h1 className='talk__label'>Let`s talk</h1>
-                        <input className='talk__input' type="text" value={formData.name} onChange={handleChange} name="name" placeholder='name' onBlur={handleFocus} focused={blurData.name.toString()} />
+                        <input className='talk__input' type="text" value={formData.name} onClick={handleClick} onChange={handleChange} name="name" onBlur={handleFocus} focused={blurData.name.toString()} />
                         {formErrors.name && <p className="error-name error-text">{formErrors.name}</p>}
-                        <input className='talk__input' type="text" value={formData.email} onChange={handleChange} name="email" placeholder='email' onBlur={handleFocus} focused={blurData.email.toString()} />
+                        <input className='talk__input' type="text" value={formData.email} onClick={handleClick} onChange={handleChange} name="email" onBlur={handleFocus} focused={blurData.email.toString()} />
                         {formErrors.email && <p className='error-text error-email'>{formErrors.email}</p>}
-                        <textarea className='talk__input talk__area' type="text" value={formData.message} onChange={handleChange} onBlur={handleFocus} name="message" placeholder='message' focused={blurData.message.toString()} />
+                        <textarea className='talk__input talk__area' type="text" value={formData.message} onClick={handleClick} onChange={handleChange} onBlur={handleFocus} name="message" focused={blurData.message.toString()} />
                         {formErrors.message && < p className='error-message error-text'>{formErrors.message}</p>}
                         <button type='submit' className='talk__btn'>SEND</button>
                     </form>
                 </div>
                 <div className="talk__socials">
-                    <a href='/#'><img src={instagramIcon} alt="" /></a>
-                    <a href='/#'><img src={linkedInIcon} alt="" /></a>
-                    <a href='/#'><img src={telegramIcon} alt="" /></a>
+                    <a className='talk__social' href='/#'><img src={instagramIcon} alt="" /></a>
+                    <a className='talk__social' href='/#'><img src={linkedInIcon} alt="" /></a>
+                    <a className='talk__social' href='/#'><img src={telegramIcon} alt="" /></a>
                 </div>
             </div>
         </section >

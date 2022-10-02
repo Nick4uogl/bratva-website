@@ -94,12 +94,33 @@
         justify-content: center;
         gap: 20px;
     }
+
+    &__social {
+        transition: all .3s ease-out;
+
+        &:nth-child(1) {
+            &:hover {
+                filter: drop-shadow(0px 5px 4px #FF9900);
+            }
+        }
+
+        &:nth-child(2) {
+            &:hover {
+                filter: drop-shadow(0px 5px 4px #001AFF);
+            }
+        }
+
+        &:nth-child(3) {
+            &:hover {
+                filter: drop-shadow(0px 5px 4px #00F0FF);
+            }
+        }
+    }
 }
 
 .error-text {
     align-self: flex-start;
     font-size: 24px;
-    display: none;
     line-height: 33px;
     background: #FB7F7F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

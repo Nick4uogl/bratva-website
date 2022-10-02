@@ -1,14 +1,15 @@
 import { Navigation } from 'swiper';
 import { Swiper } from 'swiper/react';
 import { SwiperSlide } from 'swiper/react';
+import SwiperCore from "swiper/core"
 import 'swiper/scss';
 import 'swiper/css/navigation';
 import './Team.scss'
-import test from '../../img/solutions-bg.png'
 import pohoriliy1 from '../../img/team/pohoriliy1.png'
 import pohoriliy2 from '../../img/team/pohoriliy2.png'
 import pohoriliy3 from '../../img/team/pohoriliy3.png'
 
+SwiperCore.use([Navigation])
 
 export default function Team() {
     return (

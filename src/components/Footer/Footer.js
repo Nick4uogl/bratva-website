@@ -3,6 +3,7 @@ import instagramIcon from '../../img/Instagram.png'
 import linkedInIcon from '../../img/LinkedIn.png'
 import telegramIcon from '../../img/telegram.png'
 import { Link } from 'react-scroll'
+import { NavLink } from 'react-router-dom'
 
 export default function Footer() {
     return (
@@ -10,7 +11,7 @@ export default function Footer() {
             <div className="footer__container">
                 <div className="footer__row">
                     <div className="footer__column">
-                        <a className='footer__logo' href="/#">bratva.dev <br /><span>the best way to get result</span></a>
+                        <NavLink className='footer__logo' to={"/"}>bratva.dev <br /><span>the best way to get result</span></NavLink>
                         <ul className="footer__list">
                             <li><Link to="about" spy={true} smooth={true} offset={-70} duration={500} className="footer__link">About</Link></li>
                             <li><Link to="solutions" spy={true} smooth={true} offset={-70} duration={500} className="footer__link">Solutions</Link></li>
@@ -30,9 +31,9 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className="footer__socials">
-                        <a href='/#'><img src={instagramIcon} alt="" /></a>
-                        <a href='/#'><img src={linkedInIcon} alt="" /></a>
-                        <a href='/#'><img src={telegramIcon} alt="" /></a>
+                        <a className='footer__social' href='/#'><img src={instagramIcon} alt="" /></a>
+                        <a className='footer__social' href='/#'><img src={linkedInIcon} alt="" /></a>
+                        <a className='footer__social' href='/#'><img src={telegramIcon} alt="" /></a>
                     </div>
                 </div>
                 <div className="footer__copyright">

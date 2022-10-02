@@ -26,25 +26,25 @@ export default function Technologies() {
                         <h3 className="item-technologies__title">web-development</h3>
                         <div className="item-technologies__category category-item">
                             <h3 className="category-item__title">frontend</h3>
-                            <img src={reactImg} alt="" />
-                            <img src={angularImg} alt="" />
-                            <img src={vueImg} alt="" />
+                            <div><img src={reactImg} alt="" /></div>
+                            <div><img src={angularImg} alt="" /></div>
+                            <div><img src={vueImg} alt="" /></div>
                         </div>
                         <div className="item-technologies__category category-item category-item_b">
                             <h3 className="category-item__title">backend</h3>
-                            <img src={nodeImg} alt="" />
-                            <img src={nextjsImg} alt="" />
-                            <img src={springImg} alt="" />
-                            <img src={hibernateImg} alt="" />
-                            <img src={laravelImg} alt="" />
-                            <img src={djangoImg} alt="" />
+                            <div><img src={nodeImg} alt="" /></div>
+                            <div><img src={nextjsImg} alt="" /></div>
+                            <div><img src={springImg} alt="" /></div>
+                            <div><img src={hibernateImg} alt="" /></div>
+                            <div><img src={laravelImg} alt="" /></div>
+                            <div> <img src={djangoImg} alt="" /></div>
                         </div>
                     </div>
                 </div>
                 <div className="technologies__categories">
                     <div className="technologies__item item-technologies item-technologies_s">
                         <h3 className="item-technologies__title">Mobile App dev</h3>
-                        <div className="item-technologies__category category-item">
+                        <div className="item-technologies__category category-item category-item_mobile">
                             <img src={nodeImg} alt="" />
                             <img src={pythonImg} alt="" />
                             <img src={csharpImg} alt="" />
@@ -56,17 +56,17 @@ export default function Technologies() {
                     </div>
                 </div>
                 <div className="technologies__categories">
-                    <div className="technologies__item item-technologies item-technologies_s">
+                    <div className="technologies__item item-technologies item-technologies_s item-technologies_dekstop">
                         <h3 className="item-technologies__title">Desktop software</h3>
                         <div className="item-technologies__category category-item">
-                            <img src={cplusplusImg} alt="" />
-                            <img src={csharpImg} alt="" />
-                            <img src={javaImg} alt="" />
-                            <img src={pythonImg} alt="" />
+                            <div><img src={cplusplusImg} alt="" /></div>
+                            <div><img src={csharpImg} alt="" /></div>
+                            <div><img src={javaImg} alt="" /></div>
+                            <div><img src={pythonImg} alt="" /></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }

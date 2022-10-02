@@ -1,13 +1,208 @@
-import { Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from "react-router-dom"
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper'
+import SwiperCore from "swiper/core"
 import 'swiper/scss';
-import 'swiper/css/navigation';
+import 'swiper/css/navigation'
 import './Cases.scss'
 import test from '../../img/solutions-bg.png'
 
+SwiperCore.use([Navigation])
 
+const webDevData = [
+    {
+        id: 1,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 2,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 3,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 4,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    }
+]
+const mobileDevData = [
+    {
+        id: 1,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 2,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 3,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 4,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    }
+]
+const botDevData = [
+    {
+        id: 1,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 2,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 3,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 4,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    }
+]
+const dekstopDevData = [
+    {
+        id: 1,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 2,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 3,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    },
+    {
+        id: 4,
+        title: "name of case",
+        dekstopImg: "https://www.techbuzzonline.com/wp-content/uploads/2018/06/alpha-wallhaven.jpg",
+        mobileImg: "https://blog.hubspot.com/hs-fs/hubfs/lean-labs-mobile-website.png?t=1539930716230&width=350&name=lean-labs-mobile-website.png",
+        category: "web-development",
+        description: "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке, некоторые - намеренно (например, юмористические варианты).",
+        link: "https://rt.pornhub.com/gay/categories"
+    }
+]
 
 export default function Cases() {
+    const webDevProjects = webDevData.map((project) => {
+        return (
+            <SwiperSlide>
+                <Link to={`/${project.id}`} className='category-cases__project project-cases'>
+                    <img src={project.dekstopImg} alt="" />
+                    <h2 className='project-cases__title'>{project.title}</h2>
+                </Link>
+            </SwiperSlide>
+        )
+    })
+    const mobileDevProjects = webDevData.map((project) => {
+        return (
+            <SwiperSlide>
+                <Link to={`/${project.id}`} className='category-cases__project project-cases'>
+                    <img src={project.dekstopImg} alt="" />
+                    <h2 className='project-cases__title'>{project.title}</h2>
+                </Link>
+            </SwiperSlide>
+        )
+    })
+    const botDevProjects = webDevData.map((project) => {
+        return (
+            <SwiperSlide>
+                <Link to={`/${project.id}`} className='category-cases__project project-cases'>
+                    <img src={project.dekstopImg} alt="" />
+                    <h2 className='project-cases__title'>{project.title}</h2>
+                </Link>
+            </SwiperSlide>
+        )
+    })
+    const desctopDevProjects = webDevData.map((project) => {
+        return (
+            <SwiperSlide>
+                <Link to={`/${project.id}`} className='category-cases__project project-cases'>
+                    <img src={project.dekstopImg} alt="" />
+                    <h2 className='project-cases__title'>{project.title}</h2>
+                </Link>
+            </SwiperSlide>
+        )
+    })
     return (
         <section id='cases' className='cases'>
             <div className="cases__container">
@@ -36,22 +231,7 @@ export default function Cases() {
                             }
                         }}
                     >
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
+                        {webDevProjects}
                     </Swiper>
                 </div>
                 <div className="cases__category category-cases">
@@ -78,22 +258,7 @@ export default function Cases() {
                             }
                         }}
                     >
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
+                        {mobileDevProjects}
                     </Swiper>
                 </div>
                 <div className="cases__category category-cases">
@@ -120,22 +285,7 @@ export default function Cases() {
                             }
                         }}
                     >
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
+                        {botDevProjects}
                     </Swiper>
                 </div>
                 <div className="cases__category category-cases">
@@ -162,22 +312,7 @@ export default function Cases() {
                             }
                         }}
                     >
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
-                        <SwiperSlide className='category-cases__project project-cases'>
-                            <img src={test} alt="" />
-                            <h2 className='project-cases__title'>name of case</h2>
-                        </SwiperSlide>
+                        {desctopDevProjects}
                     </Swiper>
                 </div>
             </div>
