@@ -3,6 +3,7 @@ import './Talk.scss'
 import instagramIcon from '../../img/Instagram.png'
 import linkedInIcon from '../../img/LinkedIn.png'
 import telegramIcon from '../../img/telegram.png'
+import { FormattedMessage } from 'react-intl'
 
 export default function Talk() {
     const [formData, setFormData] = React.useState(
@@ -75,18 +76,26 @@ export default function Talk() {
         <section id="talk" className='talk'>
             <div className="talk__container">
                 <p className="talk__description">
-                    Leave your name, email, a brief message and we will contact you as soon as possible and discuss your questions
+                    <FormattedMessage id='talk_description' />
                 </p>
                 <div className="talk__wrapper">
                     <form className='talk__form' onSubmit={handleSubmit}>
                         <h1 className='talk__label'>Let`s talk</h1>
                         <input className='talk__input' type="text" value={formData.name} onClick={handleClick} onChange={handleChange} name="name" onBlur={handleFocus} focused={blurData.name.toString()} />
-                        {formErrors.name && <p className="error-name error-text">{formErrors.name}</p>}
+                        {formErrors.name && <p className="error-name error-text">
+                            <FormattedMessage id='talk_errname' />
+                        </p>}
                         <input className='talk__input' type="text" value={formData.email} onClick={handleClick} onChange={handleChange} name="email" onBlur={handleFocus} focused={blurData.email.toString()} />
-                        {formErrors.email && <p className='error-text error-email'>{formErrors.email}</p>}
+                        {formErrors.email && <p className='error-text error-email'>
+                            <FormattedMessage id='talk_erremail' />
+                        </p>}
                         <textarea className='talk__input talk__area' type="text" value={formData.message} onClick={handleClick} onChange={handleChange} onBlur={handleFocus} name="message" focused={blurData.message.toString()} />
-                        {formErrors.message && < p className='error-message error-text'>{formErrors.message}</p>}
-                        <button type='submit' className='talk__btn'>SEND</button>
+                        {formErrors.message && < p className='error-message error-text'>
+                            <FormattedMessage id='talk_errmessage' />
+                        </p>}
+                        <button type='submit' className='talk__btn'>
+                            <FormattedMessage id='talk_send' />
+                        </button>
                     </form>
                 </div>
                 <div className="talk__socials">

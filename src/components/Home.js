@@ -8,10 +8,10 @@ import Team from './Team/Team.js'
 import Talk from './Talk/Talk.js'
 import Footer from './Footer/Footer.js'
 
-function Home() {
+function Home({ currentLocale, setLocale }) {
     return (
         <div>
-            <Navbar />
+            <Navbar currentLocale={currentLocale} setLocale={setLocale} />
             <Intro />
             <About />
             <Solutions />

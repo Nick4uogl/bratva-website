@@ -2,6 +2,7 @@ import { Navigation } from 'swiper';
 import { Swiper } from 'swiper/react';
 import { SwiperSlide } from 'swiper/react';
 import SwiperCore from "swiper/core"
+import { FormattedMessage } from 'react-intl';
 import 'swiper/scss';
 import 'swiper/css/navigation';
 import './Team.scss'
@@ -15,7 +16,9 @@ export default function Team() {
     return (
         <section id='team' className='team'>
             <div className="team__container">
-                <h1 className="team__title">Team</h1>
+                <h1 className="team__title">
+                    <FormattedMessage id='team_title' />
+                </h1>
                 <Swiper className='team__swiper'
                     modules={Navigation}
                     navigation

@@ -182,12 +182,8 @@
     }
 
     &__languages {
-        font-size: 20px;
-        line-height: 27px;
         padding: 7px 22px;
         background-color: #fff;
-        color: #000000;
-        font-weight: 700;
         border-radius: 5px;
         transition: all .3s ease-out;
 
@@ -195,6 +191,18 @@
             box-shadow: 0px 5px 4px #FFFFFF;
             background: #000000;
             color: #fff;
+
+            button {
+                color: #fff;
+            }
+        }
+
+        button {
+            transition: all .3s ease-out;
+            font-size: 20px;
+            line-height: 27px;
+            color: #000000;
+            font-weight: 700;
         }
     }
 }

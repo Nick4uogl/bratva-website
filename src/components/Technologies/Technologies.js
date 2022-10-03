@@ -1,4 +1,5 @@
 import './Technologies.scss'
+import { FormattedMessage } from "react-intl"
 import reactImg from '../../img/technologies/react.png'
 import angularImg from '../../img/technologies/angular.png'
 import vueImg from '../../img/technologies/vue.png'
@@ -20,10 +21,14 @@ export default function Technologies() {
     return (
         <section className='technologies'>
             <div className="technologies__container">
-                <h2 className="technologies__title">Technologies</h2>
+                <h2 className="technologies__title">
+                    <FormattedMessage id='technologies_title' />
+                </h2>
                 <div className="technologies__categories">
                     <div className="technologies__item item-technologies item-technologies_b">
-                        <h3 className="item-technologies__title">web-development</h3>
+                        <h3 className="item-technologies__title">
+                            <FormattedMessage id='technologies_webdev' />
+                        </h3>
                         <div className="item-technologies__category category-item">
                             <h3 className="category-item__title">frontend</h3>
                             <div><img src={reactImg} alt="" /></div>
@@ -43,7 +48,9 @@ export default function Technologies() {
                 </div>
                 <div className="technologies__categories">
                     <div className="technologies__item item-technologies item-technologies_s">
-                        <h3 className="item-technologies__title">Mobile App dev</h3>
+                        <h3 className="item-technologies__title">
+                            <FormattedMessage id='technologies_mobdev' />
+                        </h3>
                         <div className="item-technologies__category category-item category-item_mobile">
                             <img src={nodeImg} alt="" />
                             <img src={pythonImg} alt="" />
@@ -57,7 +64,9 @@ export default function Technologies() {
                 </div>
                 <div className="technologies__categories">
                     <div className="technologies__item item-technologies item-technologies_s item-technologies_dekstop">
-                        <h3 className="item-technologies__title">Desktop software</h3>
+                        <h3 className="item-technologies__title">
+                            <FormattedMessage id='technologies_deskdev' />
+                        </h3>
                         <div className="item-technologies__category category-item">
                             <div><img src={cplusplusImg} alt="" /></div>
                             <div><img src={csharpImg} alt="" /></div>

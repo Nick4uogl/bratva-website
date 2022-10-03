@@ -2,6 +2,7 @@ import React from 'react'
 import upworkImg from '../../img/upwork.png'
 import { Swiper } from 'swiper/react'
 import { SwiperSlide } from 'swiper/react'
+import { FormattedMessage } from "react-intl"
 import { motion, useInView } from "framer-motion"
 import 'swiper/scss'
 import './About.scss'
@@ -53,7 +54,9 @@ export default function About() {
             <div className="about__container">
                 <div className="about__top top-about">
                     <div className={`top-about__left ${isMobile ? "hidden" : ""}`}>
-                        <h2 className="top-about__title">Products&amp;Services&amp;Partners</h2>
+                        <h2 className="top-about__title">
+                            <FormattedMessage id='about_title' />
+                        </h2>
                         <div className='top-about__carousel'>
                             <Swiper className="top-about__services services-about"
                                 spaceBetween={20}
@@ -75,27 +78,31 @@ export default function About() {
                         </div>
                     </div>
                     {!isTablet && <div className="top-about__right">
-                        We have three subsidiaries from bratva.dev
-                        We also provide services on UpWork
+                        <FormattedMessage id='about_p4' />
                     </div>}
                 </div>
                 <div className="about__company company-about">
-                    <h2 className="company-about__title">About company</h2>
+                    <h2 className="company-about__title">
+                        <FormattedMessage id='about_company' />
+                    </h2>
                     <div className="company-about__row">
                         <div className="company-about__advantages advantages-about">
-                            <div className="advantages-about__item">Hello! We are  Ukrainian tech company bratva.dev
-                                And we do not want to talk about how well we do projects and what experience we have - we want to talk about our non-standard approach to work.
+                            <div className="advantages-about__item">
+                                <FormattedMessage id='about_p1' />
                             </div>
                             {!isTablet &&
-                                <div className="advantages-about__item advantages-about__item_s">The first thing we want to say is that almost every day we have online meetings and discuss ideas for new concepts of the web
-                                    outside of work - what makes us unique.
+                                <div className="advantages-about__item advantages-about__item_s">
+                                    <FormattedMessage id='about_p2' />
                                 </div>}
                             {!isTablet &&
-                                <div className="advantages-about__item advantages-about__item_s">The second is that we strictly adhere to project management methodologies and all our fellow workers are growing specialists in their stack.
+                                <div className="advantages-about__item advantages-about__item_s">
+                                    <FormattedMessage id='about_p3' />
                                 </div>}
                         </div>
                         <div ref={ref} className="company-about__graph graph-about">
-                            <h2 className="graph-about__title">Average arithmetic growth of the company after the implementation of our services</h2>
+                            <h2 className="graph-about__title">
+                                <FormattedMessage id='graph_title' />
+                            </h2>
                             <div className="graph-about__block">
                                 <div className="graph-about__lines">
                                     {isInView && <motion.svg initial="hidden" animate="visible" className='graph-about__svg' viewBox="0 0 598 267" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,21 +148,26 @@ export default function About() {
 
                                 </div>
                                 <div className="graph-about__chart">
-                                    <div className="graph-about__growth graph-about__growth_before">growth chart before cooperation</div>
-                                    <div className="graph-about__growth graph-about__growth_after">growth chart after cooperation</div>
+                                    <div className="graph-about__growth graph-about__growth_before">
+                                        <FormattedMessage id='graph_before' />
+                                    </div>
+                                    <div className="graph-about__growth graph-about__growth_after">
+                                        <FormattedMessage id='graph_before' />
+                                    </div>
                                 </div>
                             </div>
                             {isTablet &&
-                                <div className="advantages-about__item advantages-about__item_s">The first thing we want to say is that almost every day we have online meetings and discuss ideas for new concepts of the web
-                                    outside of work - what makes us unique.
+                                <div className="advantages-about__item advantages-about__item_s">
+                                    <FormattedMessage id='about_p1' />
                                 </div>}
                             {isTablet &&
-                                <div className="advantages-about__item advantages-about__item_s">The second is that we strictly adhere to project management methodologies and all our fellow workers are growing specialists in their stack.
+                                <div className="advantages-about__item advantages-about__item_s">
+                                    <FormattedMessage id='about_p2' />
                                 </div>}
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }

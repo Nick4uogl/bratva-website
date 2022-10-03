@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper'
+import { FormattedMessage } from "react-intl"
 import SwiperCore from "swiper/core"
 import 'swiper/scss';
 import 'swiper/css/navigation'
@@ -205,9 +206,13 @@ export default function Cases() {
     return (
         <section id='cases' className='cases'>
             <div className="cases__container">
-                <h2 className="cases__title">Cases</h2>
+                <h2 className="cases__title">
+                    <FormattedMessage id="cases_title" />
+                </h2>
                 <div className="cases__category category-cases">
-                    <h2 className="category-cases__title">Web-development</h2>
+                    <h2 className="category-cases__title">
+                        <FormattedMessage id="cases_category1" />
+                    </h2>
                     <Swiper className='category-cases__slider'
                         modules={Navigation}
                         navigation
@@ -234,7 +239,9 @@ export default function Cases() {
                     </Swiper>
                 </div>
                 <div className="cases__category category-cases">
-                    <h2 className="category-cases__title">Mobile App dev</h2>
+                    <h2 className="category-cases__title">
+                        <FormattedMessage id="cases_category2" />
+                    </h2>
                     <Swiper className='category-cases__slider'
                         modules={Navigation}
                         navigation
@@ -261,7 +268,9 @@ export default function Cases() {
                     </Swiper>
                 </div>
                 <div className="cases__category category-cases">
-                    <h2 className="category-cases__title">Bot development</h2>
+                    <h2 className="category-cases__title">
+                        <FormattedMessage id="cases_category3" />
+                    </h2>
                     <Swiper className='category-cases__slider'
                         modules={Navigation}
                         navigation
@@ -288,7 +297,9 @@ export default function Cases() {
                     </Swiper>
                 </div>
                 <div className="cases__category category-cases">
-                    <h2 className="category-cases__title">Desktop software</h2>
+                    <h2 className="category-cases__title">
+                        <FormattedMessage id="cases_category4" />
+                    </h2>
                     <Swiper className='category-cases__slider'
                         modules={Navigation}
                         navigation
