@@ -24,8 +24,6 @@ export default function Team() {
                     navigation
                     spaceBetween={38}
                     slidesPerView={3}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
                     breakpoints={{
                         320: {
                             slidesPerView: 1,

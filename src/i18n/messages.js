@@ -12,6 +12,8 @@ export const messages = {
         about_p1: "Hello! We are  Ukrainian tech company bratva.dev And we do not want to talk about how well we do projects and what experience we have - we want to talk about our non-standard approach to work.",
         about_p2: "The first thing we want to say is that almost every day we have online meetings and discuss ideas for new concepts of the web outside of work - what makes us unique.",
         about_p3: "The second is that we strictly adhere to project management methodologies and all our fellow workers are growing specialists in their stack.",
+        about_p4: "We have three subsidiaries from bratva.devWe also provide services on UpWork",
+        about_company: "About company",
         graph_title: "Average arithmetic growth of the company after the implementation of our services",
         graph_before: "growth chart before cooperation",
         graph_after: "growth chart after cooperation",
@@ -61,7 +63,11 @@ export const messages = {
         cases_category2: "Mobile App dev",
         cases_category3: "Bot development",
         cases_category4: "Desktop software",
-        team_title: "Team"
+        team_title: "Team",
+        project_category: "category:",
+        projcet_desktitle: "Desktop",
+        projcet_mobtitle: "Phone",
+
     },
     [LOCALES.UKRANIAN]: {
         about: "Про проект",
@@ -125,7 +131,10 @@ export const messages = {
         cases_category2: "мобільна розробка",
         cases_category3: "розробка ботів",
         cases_category4: "розробка програмного забезпечення",
-        team_title: "Команда"
+        team_title: "Команда",
+        project_category: "категорія:",
+        projcet_desktitle: "Настільний пк",
+        projcet_mobtitle: "Телефон",
     },
     [LOCALES.GERMAN]: {
         about: "über uns",
@@ -138,6 +147,8 @@ export const messages = {
         about_p1: "Hallo! Wir sind ein ukrainisches Technologieunternehmen bratva.dev. Und wir möchten nicht darüber sprechen, wie gut wir Projekte durchführen und welche Erfahrungen wir haben – wir möchten über unsere nicht standardmäßige Arbeitsweise sprechen.",
         about_p2: "Als erstes möchten wir sagen, dass wir fast täglich Online-Meetings haben und Ideen für neue Konzepte des Webs außerhalb der Arbeit diskutieren - was uns einzigartig macht.",
         about_p3: "Zweitens halten wir uns strikt an Projektmanagementmethoden und alle unsere Mitarbeiter sind wachsende Spezialisten in ihrem Stapel.",
+        about_p4: "Wir haben drei Tochterunternehmen von bratva.dev. Wir bieten auch Dienste für UpWork an",
+        about_company: "Über das Unternehmen",
         graph_title: "Durchschnittliches rechnerisches Wachstum des Unternehmens nach der Umsetzung unserer Dienstleistungen",
         graph_before: "Wachstumsdiagramm vor der Zusammenarbeit",
         graph_after: "Wachstumsdiagramm nach der Zusammenarbeit",
@@ -187,6 +198,9 @@ export const messages = {
         cases_category2: "Mobile App-Entwickler",
         cases_category3: "Bot-Entwicklung",
         cases_category4: "Desktop-Software",
-        team_title: "Mannschaft"
+        team_title: "Mannschaft",
+        project_category: "Kategorie:",
+        projcet_desktitle: "Schreibtisch",
+        projcet_mobtitle: "Telefon",
     }
 };

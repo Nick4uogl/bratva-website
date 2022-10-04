@@ -165,7 +165,7 @@ const dekstopDevData = [
 export default function Cases() {
     const webDevProjects = webDevData.map((project) => {
         return (
-            <SwiperSlide>
+            <SwiperSlide key={project.category + project.id}>
                 <Link to={`/${project.id}`} className='category-cases__project project-cases'>
                     <img src={project.dekstopImg} alt="" />
                     <h2 className='project-cases__title'>{project.title}</h2>
@@ -175,7 +175,7 @@ export default function Cases() {
     })
     const mobileDevProjects = mobileDevData.map((project) => {
         return (
-            <SwiperSlide>
+            <SwiperSlide key={project.category + project.id}>
                 <Link to={`/${project.id}`} className='category-cases__project project-cases'>
                     <img src={project.dekstopImg} alt="" />
                     <h2 className='project-cases__title'>{project.title}</h2>
@@ -185,7 +185,7 @@ export default function Cases() {
     })
     const botDevProjects = botDevData.map((project) => {
         return (
-            <SwiperSlide>
+            <SwiperSlide key={project.category + project.id}>
                 <Link to={`/${project.id}`} className='category-cases__project project-cases'>
                     <img src={project.dekstopImg} alt="" />
                     <h2 className='project-cases__title'>{project.title}</h2>
@@ -195,7 +195,7 @@ export default function Cases() {
     })
     const desctopDevProjects = dekstopDevData.map((project) => {
         return (
-            <SwiperSlide>
+            <SwiperSlide key={project.category + project.id}>
                 <Link to={`/${project.id}`} className='category-cases__project project-cases'>
                     <img src={project.dekstopImg} alt="" />
                     <h2 className='project-cases__title'>{project.title}</h2>
@@ -218,8 +218,6 @@ export default function Cases() {
                         navigation
                         spaceBetween={47}
                         slidesPerView={3}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
                         breakpoints={{
                             320: {
                                 slidesPerView: 1,
@@ -247,8 +245,6 @@ export default function Cases() {
                         navigation
                         spaceBetween={47}
                         slidesPerView={3}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
                         breakpoints={{
                             320: {
                                 slidesPerView: 1,
@@ -276,8 +272,6 @@ export default function Cases() {
                         navigation
                         spaceBetween={47}
                         slidesPerView={3}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
                         breakpoints={{
                             320: {
                                 slidesPerView: 1,
@@ -305,8 +299,6 @@ export default function Cases() {
                         navigation
                         spaceBetween={47}
                         slidesPerView={3}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
                         breakpoints={{
                             320: {
                                 slidesPerView: 1,

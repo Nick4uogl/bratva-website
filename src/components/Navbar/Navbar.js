@@ -30,7 +30,6 @@ export default function Navbar({ currentLocale, setLocale }) {
     }, [])
 
     function toggleClick() {
-        console.log(toggle)
         setToggle((toggle) => !toggle)
     }
 

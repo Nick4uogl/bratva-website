@@ -1,6 +1,5 @@
 import React from "react"
-import Navbar from "../Navbar/Navbar"
-import Footer from "../Footer/Footer"
+import { FormattedMessage } from "react-intl"
 import { useParams } from "react-router-dom"
 import "./ProjectPage.scss"
 
@@ -67,22 +66,27 @@ function ProjectPage() {
     }, [])
     return (
         <div className="project-page">
-            <Navbar />
             <main className="project-page__main">
                 <div className="project-page__row">
                     <div className="project-page__column project-page__desctop">
                         {isTablet && <div className="project-page__header">
                             <h2 className="project-page__title">{project.title}</h2>
-                            <p className="project-page__subtitle">category: {project.category}</p>
+                            <p className="project-page__subtitle">
+                                <FormattedMessage id="project_category" />
+                                {project.category}</p>
                         </div>
                         }
-                        <h2 className="project-page__title">Desktop</h2>
+                        <h2 className="project-page__title">
+                            <FormattedMessage id="project_desktitle" />
+                        </h2>
                         <div className="project-page__img">
                             <img src={`${project.desktopImg}`} alt="" />
                         </div>
                     </div>
                     <div className="project-page__column project-page__mobile">
-                        <h2 className="project-page__title">Phone</h2>
+                        <h2 className="project-page__title">
+                            <FormattedMessage id="project_mobtitle" />
+                        </h2>
                         <div className="project-page__img">
                             <img src={`${project.mobileImg}`} alt="" />
                         </div>
@@ -90,7 +94,9 @@ function ProjectPage() {
                     <div className="project-page__column project-page__info">
                         {!isTablet && <div className="project-page__header">
                             <h2 className="project-page__title">{project.title}</h2>
-                            <p className="project-page__subtitle">category: {project.category}</p>
+                            <p className="project-page__subtitle">
+                                <FormattedMessage id="project_category" /> {project.category}
+                            </p>
                         </div>
                         }
                         <p className="project-page__desc">
@@ -100,7 +106,6 @@ function ProjectPage() {
                     </div>
                 </div>
             </main>
-            <Footer />
         </div>
     )
 }
